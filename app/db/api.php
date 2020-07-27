@@ -45,6 +45,9 @@ if (!$result) {
     if (session_status() == PHP_SESSION_NONE) {
         session_start();
     }
+    if (in_array('', $result)) {
+        $result['apps_data'] = null;
+    }
     $_SESSION['sdata'] = $result;
     $_SESSION['sstat'] = true;
     echo json_encode($result);

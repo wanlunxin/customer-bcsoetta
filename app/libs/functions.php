@@ -17,3 +17,7 @@ function dateSys($date) {
     $dx = date_format($d, "Y-m-d");
     return $dx;
 }
+
+function emptyElementExists($arr) {
+    return array_search("", $arr) !== false;
+}

@@ -129,7 +129,7 @@
 		margin-top: 35px;
 	}
 	.gallery div {
-		margin-bottom: 30px;
+		/* margin-bottom: 30px; */
 	}
 	.gallery img {
 		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.10), 0 3px 6px rgba(0, 0, 0, 0.10);

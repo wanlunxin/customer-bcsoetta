@@ -1,6 +1,6 @@
-<link rel="stylesheet" type="text/css"  href="/assets/css/smart-forms.css">
-<link rel="stylesheet" type="text/css"  href="/assets/css/smart-themes/yellow.css">
-<link rel="stylesheet" type="text/css"  href="/assets/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="/assets/css/smart-forms.css">
+<link rel="stylesheet" type="text/css" href="/assets/css/smart-themes/yellow.css">
+<link rel="stylesheet" type="text/css" href="/assets/css/font-awesome.min.css">
 
 <style type="text/css">
 	footer {

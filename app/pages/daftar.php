@@ -28,7 +28,7 @@
                 	<label for="username" class="field-label">Username </label>
                     <div class="smart-widget sm-right smr-120">
                         <label class="field prepend-icon">
-                            <input type="text" name="username" id="username" class="gui-input" placeholder="Isikan username">
+                            <input type="text" name="username" id="username" class="gui-input" placeholder="Isikan username" autocomplete="off">
                             <span class="field-icon"><i class="fa fa-user"></i></span>
                         </label>
                         <label for="username" class="button">.bcsoetta.org</label>
@@ -53,7 +53,7 @@
 
             	<div class="section">
                     <label class="option option-yellow">
-                        <input type="checkbox" name="terms" value="Saya menyatakan setuju dengan syarat dan ketentuan di website ini">
+                        <input id="termscheck" type="checkbox" name="terms" value="Saya menyatakan setuju dengan syarat dan ketentuan di website ini">
                         <span class="checkbox"></span>
                         Setuju dengan <a href="#" class="smart-link"> syarat dan ketentuan </a>
                     </label>
