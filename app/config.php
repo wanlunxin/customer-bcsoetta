@@ -29,3 +29,9 @@ define('socket', '');
 define('SSO_SERVER', 'https://ssoserv.bcsoetta.org/');
 define('SSO_BROKER_ID', '7');
 define('SSO_BROKER_SECRET', 'q9Qk3e8PL4');
+
+// Email
+define('MAIL_HOST', 'mail.bcsoetta.org');
+define('MAIL_USERNAME', 'admin@bcsoetta.org');
+define('MAIL_PASSWORD', 'kpu8c503tt4');
+define('MAIL_PORT', 587); // 465

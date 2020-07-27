@@ -4,6 +4,7 @@ require_once '../../app/config.php';
 require_once '../../vendor/autoload.php';
 require_once 'db_connect.php';
 require_once pathurl.'/app/libs/functions.php';
+include_once '../config.php';
 
 use Respect\Validation\Validator as v;
 use PHPMailer\PHPMailer\PHPMailer;
@@ -66,22 +67,22 @@ if (isset($_POST['action'])) {
     						//Server settings
     					    $mail->SMTPDebug = false;
     					    $mail->isSMTP();
-    					    $mail->Host       = 'mail.codex.web.id';
+    					    $mail->Host       = MAIL_HOST;
     					    $mail->SMTPAuth   = true;
-    					    $mail->Username   = 'admin@codex.web.id';
-    					    $mail->Password   = 'confirmeddna0';
+    					    $mail->Username   = MAIL_USERNAME;
+    					    $mail->Password   = MAIL_PASSWORD;
     					    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-    					    $mail->Port       = 587;
+    					    $mail->Port       = MAIL_PORT;
 
     					    //Recipients
-    					    $mail->setFrom('admin@codex.web.id', 'bcsoetta.org');
-    					    $mail->addReplyTo('admin@codex.web.id', 'Info');
+    					    $mail->setFrom(MAIL_USERNAME, 'bcsoetta.org');
+    					    $mail->addReplyTo(MAIL_USERNAME, 'Info');
 
     					    // Notification
-    					    $mail->addAddress('admin@codex.web.id', 'Akun baru bcsoetta.org');
+    					    $mail->addAddress(MAIL_USERNAME, 'Akun baru bcsoetta.org');
 
     					    $mail->isHTML(true);
-    					    $mail->Subject = 'Akun baru codex.id';
+    					    $mail->Subject = 'Akun baru bcsoetta.org';
     					    $mail->Body    = 'Username: ' . $username . "<br>Email: " . $email;
     					    $mail->send();
 
@@ -298,16 +299,16 @@ if (isset($_POST['action'])) {
 				//Server settings
 				$mail->SMTPDebug = false;
 				$mail->isSMTP();
-				$mail->Host       = 'mail.codex.web.id';
+				$mail->Host       = MAIL_HOST;
 				$mail->SMTPAuth   = true;
-				$mail->Username   = 'admin@codex.web.id';
-				$mail->Password   = 'confirmeddna0';
+				$mail->Username   = MAIL_USERNAME;
+				$mail->Password   = MAIL_PASSWORD;
 				$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-				$mail->Port       = 587;
+				$mail->Port       = MAIL_PORT;
 
 				//Recipients
-				$mail->setFrom('admin@codex.web.id', 'bcsoetta.org');
-				$mail->addReplyTo('admin@codex.web.id', 'Info');
+				$mail->setFrom(MAIL_USERNAME, 'bcsoetta.org');
+				$mail->addReplyTo(MAIL_USERNAME, 'Info');
 
 				// Notification
 				$mail->addAddress($email, 'Ganti data akun bcsoetta.org');
