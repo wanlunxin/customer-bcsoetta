@@ -9,10 +9,10 @@ if (session_status() == PHP_SESSION_NONE) {
 // Asia/Jakarta timezone setting
 date_default_timezone_set('Asia/Jakarta');
 
-$root = "http://".$_SERVER['HTTP_HOST'];
-$root .= str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME']);
+// $root = "http://".$_SERVER['HTTP_HOST'];
+// $root .= str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME']);
 // baseurl
-define('baseurl', $root);
+define('baseurl', 'https://customer.bcsoetta.org/');
 // pathurl
 define('pathurl', $_SERVER['DOCUMENT_ROOT']);
 
@@ -31,8 +31,8 @@ define('SSO_BROKER_ID', '7');
 define('SSO_BROKER_SECRET', 'q9Qk3e8PL4');
 
 // Email
-define('MAIL_HOST', 'mail.bcsoetta.org');
+define('MAIL_HOST', 'ssl://mail.bcsoetta.org');
 define('MAIL_USERNAME', 'admin@bcsoetta.org');
 define('MAIL_PASSWORD', 'kpu8c503tt4');
-define('MAIL_SECURE', 'PHPMailer::ENCRYPTION_SMTPS'); // ENCRYPTION_SMTPS / ENCRYPTION_STARTTLS
-define('MAIL_PORT', 587); // 465 // 587
+define('MAIL_SECURE', 'PHPMailer::ENCRYPTION_STARTTLS'); // ENCRYPTION_SMTPS / ENCRYPTION_STARTTLS
+define('MAIL_PORT', 465); // 465 // 587

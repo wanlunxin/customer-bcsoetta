@@ -65,7 +65,7 @@ if (isset($_POST['action'])) {
                         $mail = new PHPMailer(true);
     					try {
     						//Server settings
-    					    $mail->SMTPDebug = false;
+    					    $mail->SMTPDebug = SMTP::DEBUG_SERVER;
     					    $mail->isSMTP();
     					    $mail->Host       = MAIL_HOST;
     					    $mail->SMTPAuth   = true;
