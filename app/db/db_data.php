@@ -71,7 +71,7 @@ if (isset($_POST['action'])) {
     					    $mail->SMTPAuth   = true;
     					    $mail->Username   = MAIL_USERNAME;
     					    $mail->Password   = MAIL_PASSWORD;
-    					    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+    					    $mail->SMTPSecure = MAIL_SECURE;
     					    $mail->Port       = MAIL_PORT;
 
     					    //Recipients
@@ -303,7 +303,7 @@ if (isset($_POST['action'])) {
 				$mail->SMTPAuth   = true;
 				$mail->Username   = MAIL_USERNAME;
 				$mail->Password   = MAIL_PASSWORD;
-				$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+				$mail->SMTPSecure = MAIL_SECURE;
 				$mail->Port       = MAIL_PORT;
 
 				//Recipients

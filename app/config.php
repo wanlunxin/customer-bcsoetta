@@ -34,4 +34,5 @@ define('SSO_BROKER_SECRET', 'q9Qk3e8PL4');
 define('MAIL_HOST', 'mail.bcsoetta.org');
 define('MAIL_USERNAME', 'admin@bcsoetta.org');
 define('MAIL_PASSWORD', 'kpu8c503tt4');
-define('MAIL_PORT', 587); // 465
+define('MAIL_SECURE', 'PHPMailer::ENCRYPTION_SMTPS'); // ENCRYPTION_SMTPS / ENCRYPTION_STARTTLS
+define('MAIL_PORT', 587); // 465 // 587
