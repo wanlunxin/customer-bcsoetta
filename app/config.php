@@ -12,7 +12,7 @@ date_default_timezone_set('Asia/Jakarta');
 // $root = "http://".$_SERVER['HTTP_HOST'];
 // $root .= str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME']);
 // baseurl
-define('baseurl', 'https://customer.bcsoetta.org/');
+define('baseurl', 'http://customer.bcsoetta.du/');
 // pathurl
 define('pathurl', $_SERVER['DOCUMENT_ROOT']);
 

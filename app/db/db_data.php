@@ -6,6 +6,8 @@ require_once 'db_connect.php';
 require_once pathurl.'/app/libs/functions.php';
 include_once '../config.php';
 
+echo baseurl;
+
 use Respect\Validation\Validator as v;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
@@ -65,7 +67,7 @@ if (isset($_POST['action'])) {
                         $mail = new PHPMailer(true);
     					try {
     						//Server settings
-    					    $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+    					    $mail->SMTPDebug = false;
     					    $mail->isSMTP();
     					    $mail->Host       = MAIL_HOST;
     					    $mail->SMTPAuth   = true;
