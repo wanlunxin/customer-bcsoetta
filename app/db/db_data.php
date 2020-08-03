@@ -6,8 +6,6 @@ require_once 'db_connect.php';
 require_once pathurl.'/app/libs/functions.php';
 include_once '../config.php';
 
-echo baseurl;
-
 use Respect\Validation\Validator as v;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
@@ -147,25 +145,6 @@ if (isset($_POST['action'])) {
         }
 		echo json_encode($status);
 	}
-
-    if ($_POST['action'] == 'login') {
-        $data = [];
-        $password = $_POST['password'];
-        $username = $_POST['username'];
-        try {
-            $sso = new Sso();
-            $u = $sso->login($username, $password);
-            $_SESSION['email'] = $u['email'];
-            $_SESSION['user_id'] = $u['user_id'];
-            $_SESSION['username'] = $u['username'];
-            $_SESSION['name'] = $u['name'];
-            $_SESSION['group'] = $u['group'];
-            $data['info'] = "Berhasil login";
-        } catch (\Exception $e) {
-            $data['info'] = $e->getMessage();
-        }
-        echo json_encode($data);
-    }
 
     if ($_POST['action'] == 'uprofil') {
         $name = $_POST['name'];
@@ -322,7 +301,6 @@ if (isset($_POST['action'])) {
 
 			}
 		}
-
 		echo json_encode($data);
 	}
 }
